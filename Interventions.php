@@ -1,5 +1,5 @@
 <?php
-/**
+/*
  * Plugin Name: Intervened Code
  * Plugin URI:  https://github.com/normeno/wordpress-intervened-code
  * Description: Add code in our pages
@@ -81,6 +81,8 @@ spl_autoload_register( 'interventions_class_loader' );
  * @return  void
  */
 function interventions_init() {
+    new Interventions\Core();
+
     if ( is_admin() ) {
         new Interventions\Admin\Core();
     }
