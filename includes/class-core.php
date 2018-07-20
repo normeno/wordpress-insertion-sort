@@ -36,6 +36,8 @@ class Core
      */
     private function init() {
         add_action( 'wp_head', array( $this, 'add_to_head') );
+        add_action( 'wp_footer', array( $this, 'add_to_body' ) );
+
     }
 
     /**
@@ -45,7 +47,12 @@ class Core
      * @return void
      */
     public function add_to_head() {
-        echo '<script>'.get_option('insertion-sort-head-js').'</script>';
-        echo '<style>'.get_option('insertion-sort-head-css').'</style>';
+        echo '<script type="text/javascript">' . get_option('insertion-sort-head-js') . '</script>';
+        echo '<style>' . get_option('insertion-sort-head-css') . '</style>';
+    }
+
+    public function add_to_body() {
+        echo '<script type="text/javascript">' . get_option('insertion-sort-footer-js') . '</script><br>';
+        echo '<style>' . get_option('insertion-sort-footer-css') . '</style>';
     }
 }
