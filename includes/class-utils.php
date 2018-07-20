@@ -1,12 +1,12 @@
 <?php
 /**
- * Intervened Code - < Utils class >
+ * Insertion sort - < Utils class >
  * This is a built-in script, please do not
  * modify if is not really necessary.
  *
- * @package interventions
+ * @package insertions
  */
-namespace Interventions;
+namespace Insertions;
 
 /**
  * Utils class
@@ -26,7 +26,7 @@ class Utils {
             return false;
         }
 
-        $path  = INTERVENTIONS_PATH;
+        $path  = INSERTIONS_PATH;
         $path .= implode( DIRECTORY_SEPARATOR, $array );
         return $path;
     }
@@ -94,7 +94,7 @@ class Utils {
             echo esc_html( $html_build );
         }
     }
-    
+
     /**
      * Returns parsed HTML from given HTML file path or URI
      *
@@ -111,7 +111,8 @@ class Utils {
         if ( $return ) {
             return $html_build;
         } else {
-            echo wp_kses_post( $html_build );
+            //echo wp_kses_post( $html_build );
+            echo $html_build;
         }
     }
 
@@ -151,17 +152,24 @@ class Utils {
         }
 
         $assets = ( is_string( $assets ) ) ? array( $assets ) : $assets;
+
         foreach ( $assets as $asset ) {
             $file = explode( '.', $asset );
             if ( is_array( $file ) ) {
                 $dir  = self::get_asset_dir( end( $file ), $folder );
-                $slug = INTERVENTIONS_ADMIN_SLUG . '-' . implode( '-', $file );
-                $uri  = INTERVENTIONS_URL . 'assets/' . $dir . '/' . $asset;
+                $slug = INSERTIONS_ADMIN_SLUG . '-' . implode( '-', $file );
+                $uri  = INSERTIONS_URL . 'assets/' . $dir . '/' . $asset;
+
                 if ( 'admin/css' === $dir || 'public/css' === $dir ) {
-                    wp_enqueue_style( $slug, $uri );
-                }
-                if ( 'admin/js' === $dir || 'public/js' === $dir ) {
+                    wp_enqueue_style($slug, $uri);
+                } else if ( 'admin/js' === $dir || 'public/js' === $dir ) {
                     wp_enqueue_script( $slug, $uri, 'jquery' );
+                } else if ( strpos($dir, 'admin/plugins') !== false ) {
+                    if ( strpos($dir, 'css') !== false ) {
+                        wp_enqueue_style($slug, $uri);
+                    } else if ( strpos($dir, 'js') !== false ) {
+                        wp_enqueue_script( $slug, $uri, 'jquery' );
+                    }
                 }
             }
         }
@@ -181,10 +189,11 @@ class Utils {
      * Register and enqueue non-public assets desired to be shown at admin dashboard
      *
      * @param   string|array $assets   Asset filename or collection of filenames.
+     * @param   string|bool $folder    Custom folder
      * @return  void|bool
      */
-    public static function load_admin_assets( $assets = array() ) {
-        return self::load_assets( $assets, 'admin' );
+    public static function load_admin_assets( $assets = array(), $folder = false ) {
+        return self::load_assets( $assets, ($folder) ? $folder : 'admin' );
     }
 
     /**
