@@ -3,13 +3,15 @@
 #
 # @author Soenke Ruempler <soenke@ruempler.eu>
 # @author Sebastian Kaspari <s.kaspari@googlemail.com>
-#
+# https://github.com/s0enke/git-hooks/tree/master/phpcs-pre-commit
 # see the README
 
 PHPCS_BIN=/usr/bin/phpcs
 PHPCS_CODING_STANDARD=PEAR
 PHPCS_IGNORE=
 TMP_STAGING=".tmp_staging"
+
+echo "INITIALIZING PRE-COMMIT"
 
 # parse config
 CONFIG_FILE=$(dirname $0)/config-precommit
