@@ -71,9 +71,12 @@ class Core {
         $updated = 0;
 
         try {
-            $data = array_filter($_POST);
+            $data = $_POST;
 
             foreach ($data as $k => $v) {
+                $v = str_replace('\"', '"', $v);
+                $v = str_replace("\'", "'", $v);
+
                 if ( update_option( $k, $v ) ) {
                     $updated++;
                 }
