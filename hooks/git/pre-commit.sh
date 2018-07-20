@@ -12,7 +12,7 @@ PHPCS_IGNORE=
 TMP_STAGING=".tmp_staging"
 
 # parse config
-CONFIG_FILE=$(dirname $0)/config
+CONFIG_FILE=$(dirname $0)/config-precommit
 if [ -e $CONFIG_FILE ]; then
     . $CONFIG_FILE
 fi
