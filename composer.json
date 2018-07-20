@@ -1,0 +1,19 @@
+{
+  "name": "normeno/wordpress-insertion-sort",
+  "description": "Add code on our pages.",
+  "keywords": ["wordpress", "insertion sort", "injection"],
+  "license": "MIT",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Nicolas Ormeno",
+      "email": "ni.ormeno@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "scripts": {
+    "create-git-hooks": [
+      "cp hooks/git/*.sh .git/hooks"
+    ]
+  }
+}
