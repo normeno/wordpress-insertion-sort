@@ -1,0 +1,98 @@
+/**
+ * Insertion sort Stylesheet
+ * This is a built-in script, please do not
+ * modify if is not really necessary.
+ *
+ * @package insertions
+ */
+
+
+/**
+ * Global wrapper name
+ *
+ * @var    string
+ * @since  0.2
+ */
+$global: ".insertion-sort";
+
+$area-container: 20em;
+
+.notifyjs-corner {
+  margin-top: 5em;
+}
+
+#{ $global } {
+
+  * {
+    box-sizing: border-box;
+  }
+
+  &.wrapper {
+    text-align: justify;
+    padding: 2em 0;
+  }
+
+  .logo {
+    text-align: center;
+    display: block;
+    margin-bottom: 2em;
+    img {
+      max-width: 380px;
+      margin: 0 auto;
+      display: inline-block;
+    }
+  }
+
+  h3 {
+    margin-top: 2em;
+  }
+
+  .code-container {
+    width: 100%;
+    height: $area-container;
+    .editor {
+      width: 49%;
+      display: inline-block;
+      height: $area-container;
+    }
+    .preview {
+      width: 49%;
+      display: inline-block;
+      border-style: dotted;
+      height: $area-container;
+    }
+  }
+
+  #footer {
+    margin-top: 5em;
+  }
+
+  textarea {
+    width: 100%;
+    height: $area-container;
+  }
+
+  .fa {
+    font-family: 'Font Awesome 5 Free';
+  }
+
+  .submit {
+    margin-top: 2em;
+    button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      width: 100%;
+    }
+  }
+
+  .hint {
+    margin: 0 0 1em 0;
+    color: #00AAAA;
+  }
+}
