@@ -11,6 +11,7 @@
 
                 <h3>JS</h3>
                 <small class="hint">Only add code, don't add &lt;script&gt;&lt;/script&gt; tags</small>
+                <small class="hint">don't use \" or \'</small>
 
                 <div class="code-container">
                     <div class="editor">
@@ -43,6 +44,7 @@
 
                 <h3>JS</h3>
                 <small class="hint">Only add code, don't add &lt;script&gt;&lt;/script&gt; tags</small>
+                <small class="hint">don't use \" or \'</small>
                 <div class="code-container">
                     <div class="editor">
                         <textarea name="insertion-sort-footer-js" id="insertion-sort-footer-js">{footer-js-data}</textarea>
