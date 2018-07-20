@@ -1,17 +1,17 @@
 <?php
 /*
- * Plugin Name: Intervened Code
- * Plugin URI:  https://github.com/normeno/wordpress-intervened-code
+ * Plugin Name: Insertions Sort
+ * Plugin URI:  https://github.com/normeno/wordpress-insertion-sort
  * Description: Add code in our pages
  * Version:     0.1 alpha
  * Author:      Nicolas Ormeno
  * Author URI:  //normeno.com
- * Text Domain: intervened-code
+ * Text Domain: insertion-sort
  * Domain Path: /languages
  * License:     GPL-3.0
  * License URI: https://opensource.org/licenses/MIT
  *
- * @package   intervened-code
+ * @package   insertion-sort
  * @author    Nicolas Ormeno
  * @license   MIT
  */
@@ -28,17 +28,17 @@ defined( 'ABSPATH' ) || die( 'Don\'t try so hard!' );
  *
  * @since   0.1
  */
-define( 'INTERVENTIONS_VERSION', '0.1 alpha' );
+define( 'INSERTIONS_VERSION', '0.1 alpha' );
 
 /**
  * Set common constants
  *
  * @since   0.1
  */
-define( 'INTERVENTIONS_URL', plugin_dir_url( __FILE__ ) );
-define( 'INTERVENTIONS_PATH', dirname( __FILE__ ) . DIRECTORY_SEPARATOR );
-define( 'INTERVENTIONS_NAMESPACE', 'Interventions' );
-define( 'INTERVENTIONS_ADMIN_SLUG', 'interventions' );
+define( 'INSERTIONS_URL', plugin_dir_url( __FILE__ ) );
+define( 'INSERTIONS_PATH', dirname( __FILE__ ) . DIRECTORY_SEPARATOR );
+define( 'INSERTIONS_NAMESPACE', 'Insertions' );
+define( 'INSERTIONS_ADMIN_SLUG', 'insertions' );
 
 /**
  * Class loader function
@@ -47,13 +47,12 @@ define( 'INTERVENTIONS_ADMIN_SLUG', 'interventions' );
  * @param   string $class Class name.
  * @return  void
  */
-function interventions_class_loader( $class ) {
-    $namespace  = INTERVENTIONS_NAMESPACE . '\\';
+function insertions_class_loader( $class ) {
+    $namespace  = INSERTIONS_NAMESPACE . '\\';
 
     if ( strpos( $class, $namespace ) !== false ) {
         $class      = strtolower( str_replace( $namespace, '', $class ) );
         $path_array = explode( '\\', $class );
-        $file       = false;
 
         if ( count( $path_array ) > 1 ) {
             $dir_array  = array_slice( $path_array, 0, -1 );
@@ -64,7 +63,7 @@ function interventions_class_loader( $class ) {
             $file       = DIRECTORY_SEPARATOR . 'class-' . $class . '.php';
         }
 
-        $file   = INTERVENTIONS_PATH . 'includes' . $file;
+        $file   = INSERTIONS_PATH . 'includes' . $file;
 
         if ( file_exists( $file ) ) {
             include $file;
@@ -72,7 +71,9 @@ function interventions_class_loader( $class ) {
     }
 }
 
-spl_autoload_register( 'interventions_class_loader' );
+spl_autoload_register( 'insertions_class_loader' );
+
+add_action( 'init', 'insertions_init' );
 
 /**
  * Initializes plugin
@@ -80,12 +81,10 @@ spl_autoload_register( 'interventions_class_loader' );
  * @since   0.1
  * @return  void
  */
-function interventions_init() {
-    new Interventions\Core();
+function insertions_init() {
+    new Insertions\Core();
 
     if ( is_admin() ) {
-        new Interventions\Admin\Core();
+        new Insertions\Admin\Core();
     }
 }
-
-add_action( 'init', 'interventions_init' );
