@@ -10,8 +10,8 @@
                 <legend><h1>HEAD</h1></legend>
 
                 <h3>JS</h3>
-                <small class="hint">Only add code, don't add &lt;script&gt;&lt;/script&gt; tags</small>
-                <small class="hint">don't use \" or \'</small>
+                <small class="hint">{HINT_DONT_SCRIPT}</small>
+                <small class="hint">{HINT_DONT_USE}</small>
 
                 <div class="code-container">
                     <div class="editor">
@@ -25,7 +25,7 @@
 
 
                 <h3>CSS</h3>
-                <small class="hint">Only add code, don't add &lt;style&gt;&lt;/style&gt; tags</small>
+                <small class="hint">{HINT_DONT_STYLE}</small>
                 <div class="code-container">
                     <div class="editor">
                         <textarea name="insertion-sort-head-css" id="insertion-sort-head-css">{head-css-data}</textarea>
@@ -43,8 +43,8 @@
                 <legend><h1>FOOTER</h1></legend>
 
                 <h3>JS</h3>
-                <small class="hint">Only add code, don't add &lt;script&gt;&lt;/script&gt; tags</small>
-                <small class="hint">don't use \" or \'</small>
+                <small class="hint">{HINT_DONT_SCRIPT}</small>
+                <small class="hint">{HINT_DONT_USE}</small>
                 <div class="code-container">
                     <div class="editor">
                         <textarea name="insertion-sort-footer-js" id="insertion-sort-footer-js">{footer-js-data}</textarea>
@@ -57,7 +57,7 @@
 
 
                 <h3>CSS</h3>
-                <small class="hint">Only add code, don't add &lt;style&gt;&lt;/style&gt; tags</small>
+                <small class="hint">{HINT_DONT_STYLE}</small>
                 <div class="code-container">
                     <div class="editor">
                         <textarea name="insertion-sort-footer-css" id="insertion-sort-footer-css">{footer-css-data}</textarea>
@@ -71,7 +71,7 @@
         </section>
 
         <div class="submit">
-            <button type="submit" form="insertion-sort-admin-form" value="Save">Save</button>
+            <button type="submit" form="insertion-sort-admin-form" value="Save">{SAVE}</button>
         </div>
     </form>
 </div>
