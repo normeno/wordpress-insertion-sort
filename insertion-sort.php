@@ -1,6 +1,6 @@
 <?php
 /*
- * Plugin Name: Insertions Sort
+ * Plugin Name: Insertion Sort
  * Plugin URI:  https://github.com/normeno/wordpress-insertion-sort
  * Description: Add code in our pages
  * Version:     0.1 alpha
@@ -82,6 +82,8 @@ add_action( 'init', 'insertions_init' );
  * @return  void
  */
 function insertions_init() {
+    load_plugin_textdomain( 'insertion-sort', false, basename( dirname( __FILE__ ) ) . '/languages');
+
     new Insertions\Core();
 
     if ( is_admin() ) {
