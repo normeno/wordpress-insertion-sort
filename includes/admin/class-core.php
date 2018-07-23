@@ -51,7 +51,7 @@ class Core {
         remove_action( 'admin_color_scheme_picker', 'admin_color_scheme_picker' );
         wp_admin_css_color(
             'insertions',
-            __( 'Insertion sort', 'insertions' ),
+            __( 'Insertion sort', 'insertion-sort' ),
             INSERTIONS_URL . 'assets/admin/css/scheme/colors.min.css',
             array( '#222222', '#6a5bb4', '#CCCCCC', '#F0F0F0' ),
             array(
