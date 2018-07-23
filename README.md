@@ -2,6 +2,8 @@
 
 This plugin helps to add Javascript and CSS code both before the **</ head>** and **</ body>**.
 
+![Screenshot 001](./insertion-sort-ss001.png)
+
 _Based on [landings-projects](https://github.com/ricardo-miguel/landings-project) structured._
 
 ## Development
