@@ -40,7 +40,8 @@
     width: 49%;
     display: inline-block;
     border-style: dotted;
-    height: 20em; }
+    height: 20em;
+    overflow-y: auto; }
 .insertion-sort #footer {
   margin-top: 5em; }
 .insertion-sort textarea {

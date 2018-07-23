@@ -60,6 +60,7 @@ $area-container: 20em;
       display: inline-block;
       border-style: dotted;
       height: $area-container;
+      overflow-y: auto;
     }
   }
 
