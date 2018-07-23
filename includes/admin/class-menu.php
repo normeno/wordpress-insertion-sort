@@ -87,8 +87,8 @@ class Menu {
      */
     public function build() {
         add_menu_page(
-            __( 'General', 'insertions' ),
-            __( 'Insertion Sort', 'insertions' ),
+            __( 'General', 'insertion-sort' ),
+            __( 'Insertion Sort', 'insertion-sort' ),
             'edit_pages',
             $this->home,
             array( $this, 'home' ),
@@ -113,6 +113,10 @@ class Menu {
         Utils::load_admin_page(
             'home.php', array(
                 'LOGO' => INSERTIONS_URL . 'assets/public/img/logo.png',
+                'HINT_DONT_SCRIPT' => __('Only add code, don\'t add &lt;script&gt;&lt;/script&gt; tags', 'insertion-sort', 'insertion-code'),
+                'HINT_DONT_USE' => __('don\'t use \" or \'', 'insertion-code'),
+                'HINT_DONT_STYLE' => __('Only add code, don\'t add &lt;style&gt;&lt;/style&gt; tags', 'insertion-code'),
+                'SAVE' => __('Save', 'insertion-code'),
                 'head-css-data' => esc_attr( get_option('insertion-sort-head-css') ),
                 'head-js-data' => esc_attr( get_option('insertion-sort-head-js') ),
                 'footer-css-data' => esc_attr( get_option('insertion-sort-footer-css') ),
