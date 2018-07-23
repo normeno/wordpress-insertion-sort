@@ -47,12 +47,12 @@ class Core
      * @return void
      */
     public function add_to_head() {
-        echo '<script type="text/javascript">' . get_option('insertion-sort-head-js') . '</script>';
-        echo '<style>' . get_option('insertion-sort-head-css') . '</style>';
+        echo get_option('insertion-sort-head-js');
+        echo get_option('insertion-sort-head-css');
     }
 
     public function add_to_body() {
-        echo '<script type="text/javascript">' . get_option('insertion-sort-footer-js') . '</script><br>';
-        echo '<style>' . get_option('insertion-sort-footer-css') . '</style>';
+        echo get_option('insertion-sort-footer-js');
+        echo get_option('insertion-sort-footer-css');
     }
 }

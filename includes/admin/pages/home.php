@@ -10,7 +10,7 @@
                 <legend><h1>HEAD</h1></legend>
 
                 <h3>JS</h3>
-                <small class="hint">{HINT_DONT_SCRIPT}</small>
+                <small class="hint">{HINT_ADD_SCRIPT}</small>
                 <small class="hint">{HINT_DONT_USE}</small>
 
                 <div class="code-container">
@@ -25,7 +25,7 @@
 
 
                 <h3>CSS</h3>
-                <small class="hint">{HINT_DONT_STYLE}</small>
+                <small class="hint">{HINT_ADD_STYLE}</small>
                 <div class="code-container">
                     <div class="editor">
                         <textarea name="insertion-sort-head-css" id="insertion-sort-head-css">{head-css-data}</textarea>
@@ -43,7 +43,7 @@
                 <legend><h1>FOOTER</h1></legend>
 
                 <h3>JS</h3>
-                <small class="hint">{HINT_DONT_SCRIPT}</small>
+                <small class="hint">{HINT_ADD_SCRIPT}</small>
                 <small class="hint">{HINT_DONT_USE}</small>
                 <div class="code-container">
                     <div class="editor">
@@ -57,7 +57,7 @@
 
 
                 <h3>CSS</h3>
-                <small class="hint">{HINT_DONT_STYLE}</small>
+                <small class="hint">{HINT_ADD_STYLE}</small>
                 <div class="code-container">
                     <div class="editor">
                         <textarea name="insertion-sort-footer-css" id="insertion-sort-footer-css">{footer-css-data}</textarea>

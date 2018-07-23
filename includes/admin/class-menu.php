@@ -113,9 +113,9 @@ class Menu {
         Utils::load_admin_page(
             'home.php', array(
                 'LOGO' => INSERTIONS_URL . 'assets/public/img/logo.png',
-                'HINT_DONT_SCRIPT' => __('Only add code, don\'t add &lt;script&gt;&lt;/script&gt; tags', 'insertion-sort', 'insertion-code'),
+                'HINT_ADD_SCRIPT' => __('You need add &lt;script&gt;&lt;/script&gt; tags', 'insertion-code'),
                 'HINT_DONT_USE' => __('don\'t use \" or \'', 'insertion-code'),
-                'HINT_DONT_STYLE' => __('Only add code, don\'t add &lt;style&gt;&lt;/style&gt; tags', 'insertion-code'),
+                'HINT_ADD_STYLE' => __('You need add &lt;style&gt;&lt;/style&gt; tags', 'insertion-code'),
                 'SAVE' => __('Save', 'insertion-code'),
                 'head-css-data' => esc_attr( get_option('insertion-sort-head-css') ),
                 'head-js-data' => esc_attr( get_option('insertion-sort-head-js') ),
