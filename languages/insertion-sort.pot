@@ -1,0 +1,60 @@
+# Copyright (C) 2018 Insertion Sort
+# This file is distributed under the same license as the Insertion Sort package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Insertion Sort 0.1 alpha\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/wordpress-"
+"insertion-sort\n"
+"POT-Creation-Date: 2018-07-23 15:01:39+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Nicolas Ormeno <ni.ormeno@gmail.com>\n"
+"Language-Team: Nicolas Ormeno <ni.ormeno@gmail.com>\n"
+
+#: includes/admin/class-core.php:54
+msgid "Insertion sort"
+msgstr ""
+
+#: includes/admin/class-menu.php:90
+msgid "General"
+msgstr ""
+
+#. #-#-#-#-#  insertion-sort.pot (Insertion Sort 0.1 alpha)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: includes/admin/class-menu.php:91
+msgid "Insertion Sort"
+msgstr ""
+
+#: includes/admin/class-menu.php:116
+msgid "Only add code, don't add &lt;script&gt;&lt;/script&gt; tags"
+msgstr ""
+
+#: includes/admin/class-menu.php:117
+msgid "don't use \\\" or '"
+msgstr ""
+
+#: includes/admin/class-menu.php:118
+msgid "Only add code, don't add &lt;style&gt;&lt;/style&gt; tags"
+msgstr ""
+
+#: includes/admin/class-menu.php:119
+msgid "Save"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/normeno/wordpress-insertion-sort"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Add code in our pages"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Nicolas Ormeno"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "//normeno.com"
+msgstr ""
