@@ -1,10 +1,6 @@
 hljs.initHighlightingOnLoad(); // Init Highlight
 
 (function($) {
-    $( "textarea[name*='insertion-sort']" ).bind('input propertychange', function () {
-        const previewId = '#' + $(this).prop('id') + '-preview';
-        $(previewId).text($(this).val());
-    });
 
     $('#insertion-sort-admin-form').submit(function(e){
         e.preventDefault();
