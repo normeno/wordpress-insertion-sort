@@ -51,8 +51,6 @@ class Utils {
 
     /**
      * Build HTML code with variables
-     * Any bracket reference in HTML code which are not defined
-     * by the array will be deleted.
      *
      * @since   0.2
      * @param   string $html   HTML code.
@@ -70,7 +68,6 @@ class Utils {
                 $replace = '{' . $key . '}';
                 $html    = str_replace( $replace, $value, $html );
             }
-            $html = preg_replace( '/\{(\S+)\}/', '', $html );
         }
 
         return $html;
